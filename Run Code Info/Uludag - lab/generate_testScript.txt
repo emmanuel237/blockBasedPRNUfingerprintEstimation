@@ -1,0 +1,3 @@
+# generate script for matlab runtime or Docker
+generateComputeScriptDocker_v2('/home/mpiuser/VISION/dataset/D01_Samsung_GalaxyS3Mini/videos',{'flatYT','indoorYT','outdoorYT',},'/home/mpiuser/SaffetExperimentResults/SaffetExperimentResults','testScript.sh')
+

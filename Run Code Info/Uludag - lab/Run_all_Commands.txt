@@ -1,0 +1,21 @@
+ssh mpiuser@
+
+sudo docker container ls
+
+sudo docker stop <container_name>
+
+sudo docker image ls
+
+sudo docker rmi <image_number1> <image_number2> -f
+
+sudo docker pull emmanuelkiegaing/compute-fingerprint-block-based:latest
+
+mkdir SaffetExperimentResults
+
+sudo mount -t nfs 172.18.108.75:/media/emmanuel/Data2 ./SaffetExperimentResults/
+
+mkdir VISION
+
+sudo mount -t nfs 172.18.108.75:/media/emmanuel/Data1/VISION/ VISION
+
+sudo docker run -v /home/mpiuser/VISION/dataset/D22_Samsung_GalaxyTrendPlus/videos:/videosDistantVolume -v /home/mpiuser/SaffetExperimentResults/SaffetExperimentResults:/resultVolume -v /home/mpiuser/fingerprintTemp:/tempVolume emmanuelkiegaing/compute-fingerprint-block-based /resultVolume/testScript_D22.sh

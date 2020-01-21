@@ -1,0 +1,3 @@
+AC coefficient sayısı threshold değeri kullanılmadı.
+Her bir frame de geçerli AC coefficientların sayısı yazıldı.
+Tüm video frame leri ne ait sonuçlar ayrı ayrı mevcut.
