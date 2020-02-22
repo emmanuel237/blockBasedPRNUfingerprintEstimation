@@ -1,2 +1,0 @@
-obj/rtpdump.o: rtpdump.cpp StdAfx.h
-obj/StdAfx.o: StdAfx.cpp StdAfx.h
