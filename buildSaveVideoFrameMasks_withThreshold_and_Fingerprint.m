@@ -1,7 +1,7 @@
 %Function building and saving video frame masks
 %uses a computing cluster to perform computation in parallel
 %This is the latest version of video frameBuilder.
-%usage : function [success] = buildSaveVideoFrameMasks(videoPath, outputFilePath,computingCluster,nberSlaves,framesChunckSize)
+%usage : buildSaveVideoFrameMasks_withThreshold_and_Fingerprint(videoPath, outputFilePath,nberSlaves,framesChunckSize,threshold,localVideoPath)
 function buildSaveVideoFrameMasks_withThreshold_and_Fingerprint(videoPath, outputFilePath,nberSlaves,framesChunckSize,threshold,localVideoPath)
 
 
@@ -15,6 +15,8 @@ if isdeployed
     framesChunckSize = str2num(framesChunckSize);
     threshold = str2num(threshold);    
     nberSlaves = str2num(nberSlaves);
+else
+    computingCluster = parcluster();
 end
 
 if nargin > 5
@@ -270,9 +272,7 @@ system(strcat('rm',[' ' videoFileName],'.264'));
 system(strcat('rm',[' ' videoFileName],'.yuv'));
 system(strcat('rm',[' ' videoFileName],'.xml'));
 system(strcat('rm',[' ' videoFileName,'_displayorder.xml']));
-if nargin > 5
-    system(strcat('rm', [' ' videoPath]));
-end
+
 success = 1;
 
 end

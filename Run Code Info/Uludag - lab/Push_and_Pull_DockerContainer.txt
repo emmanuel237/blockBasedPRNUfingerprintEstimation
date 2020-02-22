@@ -1,8 +1,0 @@
-** upload docker image to the docker account:
-sudo docker tag compute-fingerprint-block-based:latest emmanuelkiegaing/compute-fingerprint-block-based
-sudo docker push emmanuelkiegaing/compute-fingerprint-block-based:latest
-
-** download docker image from the docker account:
-sudo docker pull emmanuelkiegaing/compute-fingerprint-block-based:latest
-** The following command may also work to download docker image:
-sudo docker pull emmanuelkiegaing/compute-fingerprint-block-based:latest 

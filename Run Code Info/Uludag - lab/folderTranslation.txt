@@ -1,9 +1,0 @@
-/videosDistantVolume :  the shared folder containing videos
-/resultVolume : the shared folder where the results will be stored
-/tempVolume : temporary volume for processing
-
-**From the PC from which the docker image is created and uploaded, run the following command:
-sudo docker run -v /home/mpiuser/VISION/dataset/D01_Samsung_GalaxyS3Mini/videos:/videosDistantVolume -v /home/mpiuser/SaffetExperimentResults/SaffetExperimentResults:/resultVolume -v /home/mpiuser/fingerprintTemp:/tempVolume compute-fingerprint-block-based /resultVolume/testScript.sh
-
-**From the PC from which the docker image is downloaded, run the following command:
-sudo docker run -v /home/mpiuser/VISION/dataset/D07_Lenovo_P70A/videos:/videosDistantVolume -v /home/mpiuser/SaffetExperimentResults/SaffetExperimentResults:/resultVolume -v /home/mpiuser/fingerprintTemp:/tempVolume emmanuelkiegaing/compute-fingerprint-block-based:latest /resultVolume/test
