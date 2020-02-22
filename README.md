@@ -1,1 +1,3 @@
 # blockBasedPRNUfingerprintEstimation
+usage:
+function buildSaveVideoFrameMasks_withThreshold_and_Fingerprint(videoPath, outputFilePath,nberSlaves,framesChunckSize,threshold,localVideoPath)
